@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misi Atom: Petualangan di Dunia Mikroskopis</title>
+<style>
+:root{--navy:#101b3d;--blue:#3857d6;--cyan:#5de0dc;--gold:#ffd166;--ink:#18213d;--muted:#66708d;--paper:#f5f7ff;--white:#fff;--green:#17845d;--red:#c43d54}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 10% 0%,#354a9d 0,#17234d 42%,#0c1532 100%);color:var(--ink);min-height:100vh;padding:22px}
+.app{max-width:900px;margin:auto}.hero{color:white;text-align:center;padding:18px 12px 24px}.eyebrow{letter-spacing:3px;text-transform:uppercase;font-size:.75rem;color:var(--cyan);font-weight:800}.hero h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.05;margin:10px 0}.hero p{color:#dbe4ff;margin:8px auto;max-width:650px}.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff35;border-radius:30px;padding:7px 13px;font-size:.85rem;margin-top:8px}
+.panel{background:var(--paper);border-radius:24px;padding:clamp(18px,4vw,32px);box-shadow:0 22px 60px #050b20aa}.topline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-weight:700}.progress{height:9px;background:#e2e7f5;border-radius:20px;overflow:hidden;margin:14px 0 22px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .3s}
+h2{margin:0 0 12px;color:var(--navy)}.intro{color:#56617e;line-height:1.65}.mission-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:22px 0}.mission{background:white;border:1px solid #e1e6f4;border-radius:17px;padding:17px}.mission .emoji{font-size:2rem}.mission h3{margin:8px 0 4px;color:var(--navy)}.mission p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.45}.btn{border:0;border-radius:13px;background:var(--blue);color:white;padding:13px 20px;font-weight:800;font-size:1rem;cursor:pointer;box-shadow:0 5px 0 #263da8;transition:.15s}.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #263da8}.btn.secondary{background:#e8ecfb;color:var(--navy);box-shadow:none}.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.hidden{display:none!important}.question{font-size:1.25rem;line-height:1.45;font-weight:800;color:var(--navy);margin:18px 0}.options{display:grid;gap:10px}.option{width:100%;text-align:left;background:white;border:2px solid #e0e6f5;color:var(--ink);border-radius:14px;padding:14px 16px;font-size:1rem;font-weight:650;cursor:pointer}.option:hover{border-color:var(--blue);background:#f3f5ff}.option.correct{border-color:var(--green);background:#e7f8f0}.option.wrong{border-color:var(--red);background:#fff0f2}.feedback{margin:16px 0 0;padding:14px 16px;border-radius:14px;line-height:1.55}.feedback.good{background:#e4f7ee;color:#145d43}.feedback.bad{background:#fff0f2;color:#8c2639}.actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:20px}.atom-wrap{display:flex;justify-content:center;align-items:center;margin:12px 0 18px}.atom{position:relative;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#ffcf70 0 7%,#f59d42 8% 18%,transparent 19%);display:grid;place-items:center}.orbit{position:absolute;width:145px;height:58px;border:2px solid #7c8bd4;border-radius:50%;transform:rotate(0deg)}.orbit.two{transform:rotate(60deg)}.orbit.three{transform:rotate(-60deg)}.electron{position:absolute;width:12px;height:12px;border-radius:50%;background:#3857d6;box-shadow:0 0 0 4px #3857d622;top:19px;left:78px}.nucleus{z-index:2;text-align:center;font-size:.73rem;font-weight:900;color:#552b13}.statrow{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.stat{background:#fff;border:1px solid #e3e8f5;border-radius:12px;padding:9px 13px;font-weight:800;color:var(--navy)}.small{font-size:.85rem;color:var(--muted)}.result{text-align:center}.bigscore{font-size:3.2rem;font-weight:900;color:var(--blue);margin:5px}.badge{display:inline-block;border-radius:20px;background:#fff2cc;color:#805b00;padding:7px 13px;font-weight:800}.footer{text-align:center;color:#b8c5ef;font-size:.78rem;margin:18px 0 4px}
+@media(max-width:520px){body{padding:12px}.panel{border-radius:18px}.actions .btn{flex:1}.question{font-size:1.1rem}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+<div class="eyebrow">Game edukasi kimia • SMA</div>
+<h1>⚛️ MISI ATOM</h1>
+<p>Petualangan menyelamatkan Laboratorium Nano. Pecahkan tantangan struktur atom, kumpulkan poin, dan buktikan dirimu sebagai Penjelajah Atom!</p>
+<span class="tag">3 Misi · 12 Tantangan · Skor otomatis</span>
+</header>
+<main class="panel">
+<section id="home">
+<div class="topline"><span>🎯 TUJUAN PEMBELAJARAN</span><span>Level SMA</span></div>
+<h2>Siap memasuki dunia mikroskopis?</h2>
+<p class="intro">Dalam game ini kamu akan mempelajari partikel penyusun atom, nomor atom dan nomor massa, isotop, serta konfigurasi elektron. Selesaikan setiap misi untuk membuka misi berikutnya.</p>
+<div class="atom-wrap"><div class="atom"><div class="orbit"><i class="electron"></i></div><div class="orbit two"></div><div class="orbit three"></div><div class="nucleus">INTI<br>ATOM</div></div></div>
+<div class="mission-grid">
+<div class="mission"><div class="emoji">🔎</div><h3>Misi 1: Kenali Atom</h3><p>Temukan proton, neutron, dan elektron beserta sifatnya.</p></div>
+<div class="mission"><div class="emoji">🧩</div><h3>Misi 2: Kode Unsur</h3><p>Ungkap nomor atom, nomor massa, dan isotop.</p></div>
+<div class="mission"><div class="emoji">🚀</div><h3>Misi 3: Susun Elektron</h3><p>Jelajahi kulit atom dan konfigurasi elektronnya.</p></div>
+</div>
+<p class="small">Aturan: setiap jawaban benar mendapat 10 poin. Baca pembahasan setelah menjawab agar pemahamanmu bertambah.</p>
+<button class="btn" onclick="startGame()">Mulai Petualangan →</button>
+</section>
+<section id="game" class="hidden">
+<div class="topline"><span id="missionName">Misi 1</span><span>⭐ Skor: <b id="score">0</b></span><span>Soal <b id="qnum">1/12</b></span></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div id="missionIntro" class="small"></div>
+<div class="question" id="question"></div>
+<div class="options" id="options"></div>
+<div id="feedback" class="feedback hidden"></div>
+<div class="actions"><button class="btn secondary" onclick="goHome()">Keluar ke Beranda</button><button class="btn" id="next" onclick="nextQuestion()" disabled>Berikutnya →</button></div>
+</section>
+<section id="result" class="hidden result">
+<div style="font-size:3rem">🏆</div><span class="badge">MISI SELESAI</span>
+<h2>Hebat, Penjelajah Atom!</h2>
+<div class="bigscore" id="finalScore">0</div>
+<p id="resultText" class="intro"></p>
+<div class="statrow" style="justify-content:center"><span class="stat" id="correctCount">Benar: 0</span><span class="stat" id="percent">Nilai: 0%</span></div>
+<h3>🔐 Kunci Pemahaman</h3>
+<p class="intro" style="text-align:left"><b>Proton</b> bermuatan +1 dan berada di inti atom. <b>Neutron</b> tidak bermuatan dan berada di inti. <b>Elektron</b> bermuatan −1 dan menempati daerah/kulit elektron. Nomor atom (Z) = jumlah proton; pada atom netral jumlah elektron = jumlah proton. Nomor massa (A) = proton + neutron. Isotop memiliki nomor atom sama tetapi nomor massa berbeda. Pengisian kulit sederhana mengikuti kapasitas 2n².</p>
+<button class="btn" onclick="restart()">Main Lagi ↻</button>
+<button class="btn secondary" onclick="goHome()">Kembali ke Beranda</button>
+</section>
+</main>
+<div class="footer">MISI ATOM • Belajar kimia dengan cara seru</div>
+</div>
+<script>
+const questions=[
+{m:1,intro:"MISI 1 — KENALI ATOM: Identifikasi partikel penyusun atom.",q:"Partikel subatomik yang bermuatan positif dan berada di dalam inti atom adalah …",o:["Elektron","Proton","Neutron","Ion"],a:1,e:"Proton memiliki muatan relatif +1 dan terletak di inti atom."},
+{m:1,intro:"MISI 1 — KENALI ATOM",q:"Partikel yang tidak memiliki muatan listrik adalah …",o:["Proton","Elektron","Neutron","Kation"],a:2,e:"Neutron bersifat netral (muatan 0) dan bersama proton menyusun inti atom."},
+{m:1,intro:"MISI 1 — KENALI ATOM",q:"Di manakah elektron berada pada model atom sederhana?",o:["Di dalam proton","Di sekitar inti atom pada kulit/daerah elektron","Menyatu dengan neutron","Hanya di dalam inti"],a:1,e:"Elektron menempati daerah di sekitar inti. Dalam model kulit, elektron digambarkan berada pada kulit-kulit energi."},
+{m:1,intro:"MISI 1 — KENALI ATOM",q:"Partikel manakah yang massanya paling kecil dibandingkan proton dan neutron?",o:["Elektron","Neutron","Proton","Ketiganya sama"],a:0,e:"Massa elektron jauh lebih kecil daripada massa proton maupun neutron."},
+{m:2,intro:"MISI 2 — KODE UNSUR: Gunakan hubungan nomor atom dan nomor massa.",q:"Suatu atom memiliki 11 proton dan 12 neutron. Nomor massanya adalah …",o:["11","12","23","1"],a:2,e:"Nomor massa A = proton + neutron = 11 + 12 = 23."},
+{m:2,intro:"MISI 2 — KODE UNSUR",q:"Nomor atom (Z) suatu unsur menunjukkan jumlah …",o:["Neutron","Proton","Proton + neutron","Kulit elektron"],a:1,e:"Nomor atom didefinisikan sebagai jumlah proton di dalam inti. Jumlah proton menentukan identitas unsur."},
+{m:2,intro:"MISI 2 — KODE UNSUR",q:"Atom netral memiliki 17 proton. Jumlah elektronnya adalah …",o:["0","17","18","34"],a:1,e:"Atom netral memiliki jumlah proton (+) dan elektron (−) yang sama, sehingga elektronnya 17."},
+{m:2,intro:"MISI 2 — KODE UNSUR",q:"Atom-atom dari unsur yang sama dengan jumlah neutron berbeda disebut …",o:["Isobar","Isoton","Isotop","Ion"],a:2,e:"Isotop mempunyai nomor atom sama (proton sama), tetapi jumlah neutron dan nomor massanya berbeda."},
+{m:3,intro:"MISI 3 — SUSUN ELEKTRON: Terapkan konfigurasi elektron model kulit untuk unsur ringan.",q:"Konfigurasi elektron atom natrium (Na) dengan nomor atom 11 pada model kulit adalah …",o:["2, 8, 1","2, 7, 2","2, 8, 2","2, 9"],a:0,e:"Natrium memiliki 11 elektron: kulit K menampung 2, kulit L 8, dan tersisa 1 pada kulit M. Jadi 2, 8, 1."},
+{m:3,intro:"MISI 3 — SUSUN ELEKTRON",q:"Kapasitas maksimum kulit ke-n menurut rumus 2n² adalah …",o:["n²","2n","2n²","n + 2"],a:2,e:"Rumus kapasitas maksimum kulit ke-n pada model Bohr adalah 2n². Contoh kulit K (n=1) maksimum 2 elektron."},
+{m:3,intro:"MISI 3 — SUSUN ELEKTRON",q:"Unsur dengan nomor atom 8 memiliki konfigurasi elektron model kulit …",o:["2, 6","2, 8","2, 4, 2","8"],a:0,e:"Oksigen memiliki 8 elektron. Dua mengisi kulit K dan enam sisanya kulit L, sehingga 2, 6."},
+{m:3,intro:"MISI 3 — SUSUN ELEKTRON",q:"Elektron pada kulit terluar suatu atom disebut …",o:["Elektron inti","Neutron valensi","Elektron valensi","Proton bebas"],a:2,e:"Elektron valensi adalah elektron pada kulit terluar dan berperan penting dalam pembentukan ikatan kimia."}
+];
+let index=0,score=0,correct=0,answered=false;
+function show(id){["home","game","result"].forEach(x=>document.getElementById(x).classList.toggle("hidden",x!==id))}
+function startGame(){index=0;score=0;correct=0;show("game");render()}
+function render(){let q=questions[index];answered=false;document.getElementById("missionName").textContent=["","🔎 Misi 1: Kenali Atom","🧩 Misi 2: Kode Unsur","🚀 Misi 3: Susun Elektron"][q.m];document.getElementById("score").textContent=score;document.getElementById("qnum").textContent=(index+1)+"/"+questions.length;document.getElementById("bar").style.width=(index/questions.length*100)+"%";document.getElementById("missionIntro").textContent=q.intro;document.getElementById("question").textContent=q.q;document.getElementById("feedback").className="feedback hidden";document.getElementById("next").disabled=true;document.getElementById("next").textContent=index===questions.length-1?"Lihat Hasil 🏆":"Berikutnya →";let box=document.getElementById("options");box.innerHTML="";q.o.forEach((v,i)=>{let b=document.createElement("button");b.className="option";b.textContent=String.fromCharCode(65+i)+". "+v;b.onclick=()=>choose(i);box.appendChild(b)})}
+function choose(i){if(answered)return;answered=true;let q=questions[index],buttons=[...document.querySelectorAll(".option")];buttons.forEach((b,n)=>{b.disabled=true;if(n===q.a)b.classList.add("correct");if(n===i&&i!==q.a)b.classList.add("wrong")});let f=document.getElementById("feedback");if(i===q.a){score+=10;correct++;f.className="feedback good";f.innerHTML="<b>✓ Tepat! +10 poin.</b><br>"+q.e}else{f.className="feedback bad";f.innerHTML="<b>Belum tepat.</b><br>"+q.e}document.getElementById("score").textContent=score;document.getElementById("next").disabled=false}
+function nextQuestion(){if(!answered)return;if(index<questions.length-1){index++;render()}else finish()}
+function finish(){show("result");let pct=Math.round(correct/questions.length*100);document.getElementById("finalScore").textContent=score+" poin";document.getElementById("correctCount").textContent="Benar: "+correct+"/"+questions.length;document.getElementById("percent").textContent="Nilai: "+pct;document.getElementById("resultText").textContent=pct>=85?"Luar biasa! Kamu menguasai dasar struktur atom.":pct>=65?"Bagus! Kamu sudah memahami sebagian besar materi. Ulangi bagian yang masih keliru agar makin mantap.":"Tetap semangat! Pelajari kembali pembahasan, lalu coba lagi untuk meningkatkan skor."}
+function restart(){startGame()}
+function goHome(){show("home")}
+</script>
+</body>
+</html>
